@@ -1,0 +1,16 @@
+#include <stdio.h>
+int find_GCD(int a, int b)
+{
+    if (b==0)
+    return a;
+    return find_GCD(b,a%b);
+}
+int main()
+{
+    int x,y;
+    
+    printf("Enter two Numbers:");
+    scanf("%d %d",&x,&y);
+    printf("The GCD is %d",find_GCD(x,y));
+    return 0;
+}
